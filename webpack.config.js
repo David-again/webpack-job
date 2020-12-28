@@ -1,5 +1,6 @@
 const path = require('path');
 postCSSPlugins = [
+    require('postcss-import'),
     require('postcss-simple-vars'),
     require('postcss-nested'),
     require('autoprefixer')
@@ -10,6 +11,15 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
+  },
+  devServer: {
+      before: function(app, server) {
+          server._watch('./dist/**/*.html')
+      },
+      contentBase: path.join(__dirname, 'dist'),
+      hot: true,
+      port: 3000,
+      host: '0.0.0.0'
   },
   mode: 'development',
   module: {
@@ -35,6 +45,5 @@ module.exports = {
               use: ['xml-loader'],
           },
       ],
-  },
-  watch: true
+  }
 };
