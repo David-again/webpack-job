@@ -1,0 +1,26 @@
+/* @font-face {
+    font-family: 'Anton-Regular';
+    src: url('./Anton-Regular.ttf') format('ttf');
+    font-weight: 600;
+    font-style: normal;
+} */
+
+.hello {
+    color: blue;
+    font-family: 'Anton-Regular';
+  }
+
+body {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../images/AW109-Grand-890x395.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+$mainGreen: rgb(150,255,0); 
+$mainBlue: #2f5572;
+
+.main-doc__home-content {
+  h1 {
+    color: $mainGreen;
+  }
+}

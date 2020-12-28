@@ -1,7 +1,12 @@
 const path = require('path');
+postCSSPlugins = [
+    require('postcss-simple-vars'),
+    require('postcss-nested'),
+    require('autoprefixer')
+]
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/scripts/index.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
@@ -11,7 +16,7 @@ module.exports = {
       rules: [
           {
               test: /\.css$/i,
-              use: ['style-loader', 'css-loader'],
+              use: ['style-loader', 'css-loader', { loader: "postcss-loader", options: { postcssOptions: { plugins: postCSSPlugins } } }],
           },
           {
               test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -31,4 +36,5 @@ module.exports = {
           },
       ],
   },
+  watch: true
 };

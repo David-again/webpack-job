@@ -1,8 +1,8 @@
 import _ from 'lodash';
-import './style.css';
-import HeliIcon from './AW109SP.jpg';
-import Data from './data.xml';
-import Notes from './data.csv';
+import '../styles/styles.css';
+import HeliIcon from '../images/AW109SP.jpg';
+import Data from '../data/data.xml';
+import Notes from '../data/data.csv';
 
 function component() {
     const element = document.createElement('div');
