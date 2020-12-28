@@ -1,0 +1,6 @@
+@import '../base/_variables';
+.hello {
+    /* color: blue; */
+    color: $mainGreen;
+    font-family: 'Anton-Regular';
+  }

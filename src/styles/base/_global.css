@@ -1,0 +1,13 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../images/AW109-Grand-890x395.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* @font-face {
+    font-family: 'Anton-Regular';
+    src: url('./Anton-Regular.ttf') format('ttf');
+    font-weight: 600;
+    font-style: normal;
+} */
